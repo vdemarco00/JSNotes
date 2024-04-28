@@ -6,134 +6,41 @@
     <link href="style.css" rel="stylesheet">
     <title>JS Notes</title>
 </head>
-<body class="text-bg-dark p-3">
+<body onload="onWindowLoaded()">
     <div class="content">
         <div class="sidebar">
             <div class="sidebar-header">
                 <h1 class="logo">
                     Notes
                 </h1>
-                <div class="new-note-btn">
+                <div class="new-note-btn" onclick="createNewNote()">
                     <h2>New Note</h2>
                 </div>
             </div>
-            <div class="sidebar-content">
-                <div class="sidebar-note">
-                    <div class="sidebar-note-btn">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ACBFC3" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                    <div class="sidebar-note-close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sidebar-note">
-                    <div class="sidebar-note-btn">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ACBFC3" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                    <div class="sidebar-note-close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sidebar-note">
-                    <div class="sidebar-note-btn">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ACBFC3" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                    <div class="sidebar-note-close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sidebar-note">
-                    <div class="sidebar-note-btn">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ACBFC3" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                    <div class="sidebar-note-close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sidebar-note">
-                    <div class="sidebar-note-btn">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ACBFC3" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                    <div class="sidebar-note-close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                </div>
-                <div class="sidebar-note">
-                    <div class="sidebar-note-btn">
-                        <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h2>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ACBFC3" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                    <div class="sidebar-note-close-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                        </svg>
-                    </div>
-                </div>
+            <div class="sidebar-content" id="sidebar-content">
             </div>
         </div>
         <div class="note-section">
-            <textarea class="note-container">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tincidunt vitae semper quis lectus nulla. Justo eget magna fermentum iaculis eu non. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur. Sit amet consectetur adipiscing elit ut aliquam purus sit. Eget gravida cum sociis natoque penatibus et. Blandit aliquam etiam erat velit scelerisque in dictum non. Viverra accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Sed euismod nisi porta lorem mollis aliquam. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus.
-
-                    Accumsan in nisl nisi scelerisque eu ultrices vitae. Arcu vitae elementum curabitur vitae nunc sed. Ac ut consequat semper viverra nam libero justo laoreet. Ut eu sem integer vitae justo eget magna. Enim ut tellus elementum sagittis vitae et leo duis ut. Consectetur lorem donec massa sapien faucibus et molestie ac. Pretium nibh ipsum consequat nisl vel pretium lectus quam. Auctor elit sed vulputate mi. Sed euismod nisi porta lorem mollis aliquam ut. Ultrices neque ornare aenean euismod elementum nisi. Lobortis feugiat vivamus at augue eget arcu dictum varius duis. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Nisi porta lorem mollis aliquam ut. Ac tortor vitae purus faucibus ornare. Malesuada fames ac turpis egestas integer eget aliquet. Velit ut tortor pretium viverra suspendisse potenti. Purus semper eget duis at tellus. Vitae turpis massa sed elementum tempus.
-                    
-                    Mauris ultrices eros in cursus turpis massa. Ultrices vitae auctor eu augue ut. Nisi est sit amet facilisis magna. Adipiscing elit ut aliquam purus sit. Amet cursus sit amet dictum sit amet justo. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Velit aliquet sagittis class consectetur purus ut faucibus. Libero nunc consequat interdum varius sit. Dolor morbi non arcu risus. Posuere ac ut consequat semper.
-                    
-                    Quis blandit turpis cursus in hac habitasse platea dictumst. Risus feugiat in ante metus dictum at tempor commodo. Justo eget magna fermentum iaculis. Neque ornare aenean euismod elementum nisi quis. Nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue. Volutpat consequat mauris nunc congue nisi vitae. Malesuada fames ac turpis egestas sed tempus. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Porttitor massa class neque aliquam vestibulum. Turpis tincidunt class aliquet risus.
-                    
-                    Vel fringilla est ullamcorper eget nulla facilisi etiam dignissim. Congue mauris rhoncus aenean vel elit scelerisque mauris. Purus sit amet luctus venenatis. Felis imperdiet proin fermentum leo vel orci porta non. Eros in cursus turpis massa tincidunt dui. Consequat nisl vel pretium lectus quam class leo in. Nulla aliquet porttitor lacus luctus. Malesuada fames ac turpis egestas maecenas pharetra convallis posuere. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. At varius vel pharetra vel turpis nunc eget lorem. Purus ut faucibus pulvinar elementum integer enim neque volutpat. Eu mi bibendum neque egestas congue quisque egestas.
-                    
-                    Tempus egestas sed sed risus pretium quam. Metus dictum at tempor commodo ullamcorper a lacus vestibulum. Morbi tristique senectus et netus et. Egestas purus viverra accumsan in. Nam at lectus urna duis convallis convallis tellus class interdum. Tellus at urna condimentum mattis pellentesque class. Purus semper eget duis at tellus at urna. Nibh praesent tristique magna sit amet purus gravida quis. Cursus sit amet dictum sit amet justo donec enim diam. Donec adipiscing tristique risus nec feugiat in.
-                    
-                    Molestie ac feugiat sed lectus vestibulum mattis ullamcorper. Faucibus scelerisque eleifend donec pretium vulputate sapien nec. Et magnis dis parturient montes nascetur. Vel orci porta non pulvinar. Vel orci porta non pulvinar neque laoreet suspendisse interdum. Mattis nunc sed blandit libero volutpat sed. Consectetur adipiscing elit pellentesque habitant. Venenatis tellus in metus vulputate eu. Eget dolor morbi non arcu. Nisi lacus sed viverra tellus in hac. Non tellus orci ac auctor. Ut etiam sit amet nisl. Amet justo donec enim diam vulputate ut pharetra sit. Mi quis hendrerit dolor magna eget est lorem.
-                    
-                    A diam maecenas sed enim. Volutpat maecenas volutpat blandit aliquam etiam erat. Amet nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Bibendum est ultricies integer quis auctor elit. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Iaculis urna class volutpat lacus. Semper eget duis at tellus at urna condimentum. Leo duis ut diam quam nulla porttitor massa. Elementum curabitur vitae nunc sed velit dignissim sodales ut. Adipiscing at in tellus integer. Convallis a cras semper auctor neque. Neque laoreet suspendisse interdum consectetur libero class faucibus nisl tincidunt. Enim diam vulputate ut pharetra sit amet aliquam class diam. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Sed sed risus pretium quam vulputate dignissim suspendisse. Arcu bibendum at varius vel pharetra vel turpis. Scelerisque viverra mauris in aliquam sem fringilla ut morbi. Netus et malesuada fames ac turpis egestas sed tempus urna. Sem viverra aliquet eget sit amet tellus cras adipiscing. Et netus et malesuada fames ac turpis egestas sed.
-                    
-                    Consectetur adipiscing elit ut aliquam purus. Erat pellentesque adipiscing commodo elit. Vestibulum morbi blandit cursus risus at. Lobortis feugiat vivamus at augue eget. Ornare aenean euismod elementum nisi quis eleifend quam adipiscing. In mollis nunc sed class semper risus in hendrerit gravida. Eget magna fermentum iaculis eu non diam phasellus vestibulum. Nam libero justo laoreet sit amet cursus. Volutpat diam ut venenatis tellus in. Risus viverra adipiscing at in. Ac tincidunt vitae semper quis lectus nulla at volutpat diam. Phasellus egestas tellus rutrum tellus pellentesque eu. Lacus luctus accumsan tortor posuere. Sodales ut etiam sit amet nisl. Elementum sagittis vitae et leo duis ut. Enim ut tellus elementum sagittis vitae. Urna cursus eget nunc scelerisque viverra mauris in.
-                    
-                    Nunc sed blandit libero volutpat. Feugiat in ante metus dictum at tempor. Accumsan sit amet nulla facilisi morbi tempus. Eu volutpat odio facilisis mauris sit amet. Sodales neque sodales ut etiam sit amet nisl purus. Senectus et netus et malesuada fames ac turpis. Viverra orci sagittis eu volutpat. Volutpat lacus laoreet non curabitur gravida arcu ac tortor. Tincidunt nunc pulvinar sapien et. Morbi tempus iaculis urna class volutpat lacus laoreet. Nisi scelerisque eu ultrices vitae auctor eu augue ut lectus. Imperdiet dui accumsan sit amet nulla facilisi.
+            <textarea class="note-container" id="note-container">
             </textarea>
         </div>
     </div>
     <script src="script.js"></script> 
 </body>
 </html>
+
+<!-- <div class="sidebar-note">
+    <div class="sidebar-note-btn">
+        <h2 id="sitebar-note-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit,</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="#ACBFC3" class="bi bi-x-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+        </svg>
+    </div>
+    <div class="sidebar-note-close-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="red" class="bi bi-x-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+        </svg>
+    </div>
+</div> -->
